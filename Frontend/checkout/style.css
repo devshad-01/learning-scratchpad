@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header-text {
+    font-size: 30px;
+    text-align: center;
+    color: bisque;
+    padding: 40px;
+    padding-left: 10px;
+}
+
+body {
+    background-color: beige;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.header {
+    background-color: rgb(59, 34, 4);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+.logo {
+    height: 30px;
+
+}
+
+.layout {
+    
+    display: grid;
+    grid-template-rows:auto 1fr auto;
+    grid-template-areas:
+        "header-sec "
+        "content-sec "
+        "order-calculated-sec";
+    min-height: 100vh;
+
+}
+
+.header {
+    grid-area: header-sec;
+
+
+
+
+}
+
+.content {
+    grid-area: content-sec;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    
+    border-radius: 5px;
+    margin: 10px;
+
+
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.item-card {
+    list-style: none;
+    border-bottom: 1.5px solid rgb(237, 193, 167);
+    margin: 15px;
+    padding-bottom: 15px;
+
+}
+
+.card-label {
+    padding-bottom: 30px;
+}
+
+.item-count {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-right: 8px;
+
+}
+
+h4 {
+    padding-left: 0px;
+
+
+
+}
+
+.item-name {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    
+
+
+}
+
+.content-card {
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgb(240, 222, 199);
+    padding: 20px;
+
+}
+
+.order-calculated {
+    grid-area: order-calculated-sec
+}
+
+.order-calculated {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.place-order {
+    border-radius: 30px;
+    background-color: rgb(157, 94, 17);
+    color: aliceblue;
+
+    padding: 10px 300px;
+    /* vertical horizontal padding */
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calculation {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+
+
+}
+
+.math {
+    padding-left: 200px;
+}
+
+.Total {
+    font-weight: bold;
+}
+
+.calculation {
+    border-spacing: 20px;
+}
+.order-calculated{
+    padding-bottom: 20px;
+}
+h3 {
+    font-weight: 200;
+
+}
+
+.ingredient-label {
+    padding-left: 30px;
+    list-style: none;
+    color: rgb(215, 108, 21);
+
+
+}
+
+.input-box {
+    border-radius: 30px;
+    padding: 15px 150px;
+    background-color: rgb(240, 222, 199);
+    margin-bottom: 20px;
+}
+
+.input-label {
+    position: absolute;
+    background-color: rgb(240, 222, 199);
+    left: 70px;
+    top: -10px;
+    padding: 1px 5px;
+}
+
+.input-group {
+    position: relative;
+
+}
+
+.content-card left-card {
+    height: 200px;
+}
+.left-card{
+    align-self: start;
+    height: auto;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="layout">
+    <section class="header">
+        <img class="logo" src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
+            alt="coffee masters logo">
+        <h1 class="header-text">Cofee Matters</h1>
+
+    </section>
+    <section class="content">
+        <div class="content-card left-card">
+            <h3 class="card-label">ITEMS</h3>
+            <ul class="item-card">
+                <li>
+
+                    <h4 class="item-name">
+                        <span>
+                            <span class="item-count">1x</span> Cappuccino
+                        </span>
+                        <span class="item-amount">$3.35</span>
+                    </h4>
+                    <ul class="ingredients">
+                        <li class="ingredient-label">Lite Milk</li>
+                        <li class="ingredient-label">Double espresso</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="item-card">
+                <li>
+
+                    <h4 class="item-name">
+                        <span>
+                            <span class="item-count">1x</span> Cappuccino
+                        </span>
+                        <span class="item-amount">$3.35</span>
+                    </h4>
+                    <ul class="ingredients">
+                        <li class="ingredient-label">Lite Milk</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="item-card">
+                <li>
+
+                    <h4 class="item-name">
+                        <span>
+                            <span class="item-count">1x</span> Cappuccino
+                        </span>
+                        <span class="item-amount">$3.35</span>
+                    </h4>
+                    <ul class="ingredients">
+                        <li class="ingredient-label">Lite Milk</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="right-column">
+        <div class="content-card name-card">
+            <h3 class="card-label">NAME</h3>
+            <div class="input-group">
+                <label for="name" class="input-label">Name</label>
+                <input type="text" class="input-box">
+            </div>
+
+
+
+        </div>
+        <div class="content-card payment-card">
+            <h3 class="card-label">PAYMENT</h3>
+            <div class="input-group">
+                <label for="CARD Number" class="input-label">Card Number</label>
+                <input type="text" class="input-box">
+            </div>
+
+            <div class="input-group">
+                
+                    <label for="CCV Number" class="input-label">CCV number</label>
+                    <input type="text" class="input-box">
+                
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+    <section class="order-calculated">
+        <table class="calculation">
+            <tbody>
+                <tr class="subtotal">
+                    <td>Subtotal</td>
+                    <td class="math">$9.00</td>
+
+                </tr>
+                <tr class="Tax">
+                    <td>Tax</td>
+                    <td class="math">$1.00</td>
+
+                </tr>
+                <tr class="Total">
+                    <td>Total</td>
+                    <td class="math">$10.00</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <button class="place-order">
+            Place Order
+        </button>
+    </section>
+
+</body>
+
+</html>
