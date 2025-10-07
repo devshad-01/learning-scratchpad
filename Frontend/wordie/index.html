@@ -4,51 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordie</title>
+    <meta name="description" content="Wordie - A word guessing game where you have 6 tries to guess a 5-letter word">
+    <title>Wordie - Word Guessing Game</title>
     <link rel="stylesheet" href="style.css">
-
+    <!-- Preload for better performance -->
+    <link rel="preconnect" href="https://words.dev-apis.com">
 </head>
 
 <body>
-    <section class="header">
-        <h1>
-            Wordie Game
-        </h1>
-    </section>
-    <section class="input-grid">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-        <input class="inout-box" type="text">
-    </section>
+    <!-- Semantic header with proper ARIA labels -->
+    <header class="header" role="banner">
+        <h1 class="game-title">Wordie Game</h1>
+        <p class="game-subtitle">Guess the 5-letter word in 6 tries!</p>
+    </header>
 
+    <!-- Main game area -->
+    <main class="game-container" role="main">
+        <!-- Game board with semantic structure -->
+        <section class="game-board" aria-label="Game board">
+            <!-- Row 1 -->
+            <div class="guess-row" data-row="0" role="group" aria-label="Guess row 1">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1">
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2">
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3">
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4">
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5">
+            </div>
+
+            <!-- Row 2 -->
+            <div class="guess-row" data-row="1" role="group" aria-label="Guess row 2">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5" disabled>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="guess-row" data-row="2" role="group" aria-label="Guess row 3">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5" disabled>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="guess-row" data-row="3" role="group" aria-label="Guess row 4">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5" disabled>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="guess-row" data-row="4" role="group" aria-label="Guess row 5">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5" disabled>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="guess-row" data-row="5" role="group" aria-label="Guess row 6">
+                <input class="letter-box" type="text" maxlength="1" data-position="0" aria-label="Letter 1" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="1" aria-label="Letter 2" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="2" aria-label="Letter 3" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="3" aria-label="Letter 4" disabled>
+                <input class="letter-box" type="text" maxlength="1" data-position="4" aria-label="Letter 5" disabled>
+            </div>
+        </section>
+
+        <!-- Game controls -->
+        <section class="game-controls" aria-label="Game controls">
+            <button class="submit-btn" type="button" aria-label="Submit guess">Submit Guess</button>
+            <button class="reset-btn" type="button" aria-label="Reset game">New Game</button>
+        </section>
+
+        <!-- Message area for feedback -->
+        <section class="message-area" role="status" aria-live="polite" aria-label="Game messages">
+            <!-- Messages will appear here -->
+        </section>
+    </main>
+
+    <!-- Loading indicator -->
+    <div class="loading" aria-hidden="true">
+        <span>Loading...</span>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
