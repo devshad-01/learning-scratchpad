@@ -1,0 +1,219 @@
+/* ==================== */
+/* RESET & BASE STYLES  */
+/* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette */
+    --bg-primary: #1e1e2e;
+    --bg-secondary: #2a2a3e;
+    --bg-calculator: #252538;
+    --bg-button: #3a3a52;
+    --bg-button-hover: #4a4a62;
+    --bg-operator: #ff9500;
+    --bg-operator-hover: #ffad33;
+    --bg-equals: #34c759;
+    --bg-equals-hover: #5dd67f;
+    --bg-clear: #ff3b30;
+    --bg-clear-hover: #ff6058;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --shadow: rgba(0, 0, 0, 0.3);
+
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-size-display: 2.5rem;
+    --font-size-button: 1.5rem;
+
+    /* Spacing */
+    --gap: 12px;
+    --padding: 20px;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ==================== */
+/* CONTAINER & LAYOUT   */
+/* ==================== */
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculator {
+    background: var(--bg-calculator);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: 0 20px 60px var(--shadow);
+}
+
+/* ==================== */
+/* DISPLAY SECTION      */
+/* ==================== */
+.display-section {
+    margin-bottom: var(--padding);
+}
+
+.display {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: var(--font-size-display);
+    color: var(--text-primary);
+    text-align: right;
+    font-weight: 300;
+    letter-spacing: 1px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display:focus {
+    outline: none;
+}
+
+/* ==================== */
+/* BUTTONS GRID         */
+/* ==================== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+}
+
+.btn {
+    background: var(--bg-button);
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: var(--font-size-button);
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: var(--bg-button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== */
+/* SPECIAL BUTTONS      */
+/* ==================== */
+.operator {
+    background: var(--bg-operator);
+    font-weight: 600;
+}
+
+.operator:hover {
+    background: var(--bg-operator-hover);
+}
+
+.equals-btn {
+    background: var(--bg-equals);
+    font-weight: 600;
+}
+
+.equals-btn:hover {
+    background: var(--bg-equals-hover);
+}
+
+.clear-btn {
+    background: var(--bg-clear);
+    font-weight: 600;
+}
+
+.clear-btn:hover {
+    background: var(--bg-clear-hover);
+}
+
+.delete-btn {
+    background: var(--bg-button);
+    font-size: 1.2rem;
+}
+
+.zero-btn {
+    grid-column: span 2;
+}
+
+/* ==================== */
+/* RESPONSIVE DESIGN    */
+/* ==================== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-display: 2rem;
+        --font-size-button: 1.2rem;
+        --gap: 8px;
+        --padding: 15px;
+    }
+
+    .btn {
+        padding: 15px;
+    }
+
+    .display {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    :root {
+        --font-size-display: 1.5rem;
+        --font-size-button: 1rem;
+    }
+}
+
+/* ==================== */
+/* ACCESSIBILITY        */
+/* ==================== */
+.btn:focus {
+    outline: 2px solid var(--bg-operator);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==================== */
+/* DARK MODE SUPPORT    */
+/* ==================== */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-primary: #f5f5f7;
+        --bg-secondary: #ffffff;
+        --bg-calculator: #ffffff;
+        --bg-button: #e5e5ea;
+        --bg-button-hover: #d1d1d6;
+        --text-primary: #000000;
+        --text-secondary: #6e6e73;
+    }
+
+    body {
+        background: linear-gradient(135deg, #e0e7ff 0%, #f3e7ff 100%);
+    }
+}
